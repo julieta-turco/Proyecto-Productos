@@ -41,15 +41,15 @@ namespace WindowsFormsProductos
             this.tabPageCarga = new System.Windows.Forms.TabPage();
             this.cargar = new System.Windows.Forms.Button();
             this.tabPageMov = new System.Windows.Forms.TabPage();
+            this.rdb_egr = new System.Windows.Forms.RadioButton();
+            this.rdb_ing = new System.Windows.Forms.RadioButton();
             this.lbl_stock = new System.Windows.Forms.Label();
-            this.lbl_codigodesc = new System.Windows.Forms.Label();
+            this.lbl_descmov = new System.Windows.Forms.Label();
             this.lbl_codigomov = new System.Windows.Forms.Label();
             this.aceptar = new System.Windows.Forms.Button();
             this.textBoxCantidad = new System.Windows.Forms.TextBox();
             this.lbl_cantidad = new System.Windows.Forms.Label();
             this.Dgv_productos = new System.Windows.Forms.DataGridView();
-            this.rdbt_ing = new System.Windows.Forms.RadioButton();
-            this.rdbt_egr = new System.Windows.Forms.RadioButton();
             this.tabControl1.SuspendLayout();
             this.tabPageCarga.SuspendLayout();
             this.tabPageMov.SuspendLayout();
@@ -159,10 +159,10 @@ namespace WindowsFormsProductos
             // tabPageMov
             // 
             this.tabPageMov.BackColor = System.Drawing.Color.MistyRose;
-            this.tabPageMov.Controls.Add(this.rdbt_egr);
-            this.tabPageMov.Controls.Add(this.rdbt_ing);
+            this.tabPageMov.Controls.Add(this.rdb_egr);
+            this.tabPageMov.Controls.Add(this.rdb_ing);
             this.tabPageMov.Controls.Add(this.lbl_stock);
-            this.tabPageMov.Controls.Add(this.lbl_codigodesc);
+            this.tabPageMov.Controls.Add(this.lbl_descmov);
             this.tabPageMov.Controls.Add(this.lbl_codigomov);
             this.tabPageMov.Controls.Add(this.aceptar);
             this.tabPageMov.Controls.Add(this.textBoxCantidad);
@@ -175,6 +175,28 @@ namespace WindowsFormsProductos
             this.tabPageMov.TabIndex = 1;
             this.tabPageMov.Text = "Movimiento de productos";
             // 
+            // rdb_egr
+            // 
+            this.rdb_egr.AutoSize = true;
+            this.rdb_egr.Location = new System.Drawing.Point(382, 165);
+            this.rdb_egr.Name = "rdb_egr";
+            this.rdb_egr.Size = new System.Drawing.Size(86, 27);
+            this.rdb_egr.TabIndex = 9;
+            this.rdb_egr.TabStop = true;
+            this.rdb_egr.Text = "egreso";
+            this.rdb_egr.UseVisualStyleBackColor = true;
+            // 
+            // rdb_ing
+            // 
+            this.rdb_ing.AutoSize = true;
+            this.rdb_ing.Location = new System.Drawing.Point(382, 131);
+            this.rdb_ing.Name = "rdb_ing";
+            this.rdb_ing.Size = new System.Drawing.Size(91, 27);
+            this.rdb_ing.TabIndex = 8;
+            this.rdb_ing.TabStop = true;
+            this.rdb_ing.Text = "ingreso";
+            this.rdb_ing.UseVisualStyleBackColor = true;
+            // 
             // lbl_stock
             // 
             this.lbl_stock.AutoSize = true;
@@ -184,14 +206,14 @@ namespace WindowsFormsProductos
             this.lbl_stock.TabIndex = 7;
             this.lbl_stock.Text = "label1";
             // 
-            // lbl_codigodesc
+            // lbl_descmov
             // 
-            this.lbl_codigodesc.AutoSize = true;
-            this.lbl_codigodesc.Location = new System.Drawing.Point(43, 76);
-            this.lbl_codigodesc.Name = "lbl_codigodesc";
-            this.lbl_codigodesc.Size = new System.Drawing.Size(55, 23);
-            this.lbl_codigodesc.TabIndex = 6;
-            this.lbl_codigodesc.Text = "label2";
+            this.lbl_descmov.AutoSize = true;
+            this.lbl_descmov.Location = new System.Drawing.Point(43, 76);
+            this.lbl_descmov.Name = "lbl_descmov";
+            this.lbl_descmov.Size = new System.Drawing.Size(55, 23);
+            this.lbl_descmov.TabIndex = 6;
+            this.lbl_descmov.Text = "label2";
             // 
             // lbl_codigomov
             // 
@@ -242,28 +264,7 @@ namespace WindowsFormsProductos
             this.Dgv_productos.RowTemplate.Height = 28;
             this.Dgv_productos.Size = new System.Drawing.Size(861, 224);
             this.Dgv_productos.TabIndex = 8;
-            // 
-            // rdbt_ing
-            // 
-            this.rdbt_ing.AutoSize = true;
-            this.rdbt_ing.Location = new System.Drawing.Point(382, 131);
-            this.rdbt_ing.Name = "rdbt_ing";
-            this.rdbt_ing.Size = new System.Drawing.Size(91, 27);
-            this.rdbt_ing.TabIndex = 8;
-            this.rdbt_ing.TabStop = true;
-            this.rdbt_ing.Text = "ingreso";
-            this.rdbt_ing.UseVisualStyleBackColor = true;
-            // 
-            // rdbt_egr
-            // 
-            this.rdbt_egr.AutoSize = true;
-            this.rdbt_egr.Location = new System.Drawing.Point(382, 165);
-            this.rdbt_egr.Name = "rdbt_egr";
-            this.rdbt_egr.Size = new System.Drawing.Size(86, 27);
-            this.rdbt_egr.TabIndex = 9;
-            this.rdbt_egr.TabStop = true;
-            this.rdbt_egr.Text = "egreso";
-            this.rdbt_egr.UseVisualStyleBackColor = true;
+            this.Dgv_productos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_productos_CellContentClick);
             // 
             // formproductos
             // 
@@ -307,10 +308,10 @@ namespace WindowsFormsProductos
         private System.Windows.Forms.Button aceptar;
         private System.Windows.Forms.Button cargar;
         private System.Windows.Forms.DataGridView Dgv_productos;
-        private System.Windows.Forms.Label lbl_codigodesc;
+        private System.Windows.Forms.Label lbl_descmov;
         private System.Windows.Forms.Label lbl_codigomov;
         private System.Windows.Forms.Label lbl_stock;
-        private System.Windows.Forms.RadioButton rdbt_egr;
-        private System.Windows.Forms.RadioButton rdbt_ing;
+        private System.Windows.Forms.RadioButton rdb_egr;
+        private System.Windows.Forms.RadioButton rdb_ing;
     }
 }
