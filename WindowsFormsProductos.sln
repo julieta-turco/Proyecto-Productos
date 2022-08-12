@@ -7,10 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsProductos", "Wi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "entidades", "entidades\entidades.csproj", "{0CE0B0AE-2552-4158-B55F-61500E436012}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaDatos", "CapaDatos\CapaDatos.csproj", "{46811294-00CB-484E-9012-1DF8CEB2BC40}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaNegocios", "CapaNegocios\CapaNegocios.csproj", "{22D111C6-3556-42FA-A43A-8E6476F8DE4C}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,14 +21,6 @@ Global
 		{0CE0B0AE-2552-4158-B55F-61500E436012}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0CE0B0AE-2552-4158-B55F-61500E436012}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0CE0B0AE-2552-4158-B55F-61500E436012}.Release|Any CPU.Build.0 = Release|Any CPU
-		{46811294-00CB-484E-9012-1DF8CEB2BC40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{46811294-00CB-484E-9012-1DF8CEB2BC40}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{46811294-00CB-484E-9012-1DF8CEB2BC40}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{46811294-00CB-484E-9012-1DF8CEB2BC40}.Release|Any CPU.Build.0 = Release|Any CPU
-		{22D111C6-3556-42FA-A43A-8E6476F8DE4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{22D111C6-3556-42FA-A43A-8E6476F8DE4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{22D111C6-3556-42FA-A43A-8E6476F8DE4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{22D111C6-3556-42FA-A43A-8E6476F8DE4C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -39,7 +39,7 @@ namespace entidades
         public producto()
         {
         }
-        //este contructor sirve para inicializar los objetos. uno por defecto, el otro con parametros
+        //este contructor sirve para inicializar los objetos.
         public producto (int cod, string desc)
         {
             codigo = cod;
@@ -47,12 +47,12 @@ namespace entidades
             stock = 0; //empieza en cero para ingresar un producto nuevo.
         }
 
-        public producto(int cod, string desc, int cant)
-        {
-            codigo = cod;
-            descripcion = desc;
-            stock = cant;
-        }
+        //public producto(int cod, string desc,int cant)
+        //{
+        //    codigo = cod;
+        //    descripcion = desc;
+        //    stock = cant;
+        //}
         #endregion
 
         #region Metodos
