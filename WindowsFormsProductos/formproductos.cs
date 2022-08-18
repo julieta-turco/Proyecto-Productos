@@ -55,5 +55,10 @@ namespace WindowsFormsProductos
         {
 
         }
+
+        private void formproductos_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
