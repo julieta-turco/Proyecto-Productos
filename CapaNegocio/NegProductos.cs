@@ -9,8 +9,16 @@ using entidades;
 
 namespace CapaNegocio
 {
-    class NegProductos
+    public class NegProductos
     {
-
+        AdminisProductos objDatosPrd = new CapaDatos.AdminisProductos();
+        public int abmProductos(string accion, producto objProductos)
+        {
+            return objDatosPrd.abmProductos(accion, objProductos);
+        }
+        public DataSet listadoproductos(string cual)
+        {
+            return objDatosPrd.listadoProductos(cual);
+        }
     }
 }

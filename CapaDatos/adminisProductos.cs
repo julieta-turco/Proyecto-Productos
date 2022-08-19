@@ -9,7 +9,7 @@ using entidades;
 
 namespace CapaDatos
 {
-    class adminisProductos : DatosConexion
+   public class AdminisProductos : DatosConexion
     {
         public int abmProductos (string accion, producto objProductos)
         {
