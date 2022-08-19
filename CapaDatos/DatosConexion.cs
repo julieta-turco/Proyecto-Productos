@@ -8,7 +8,7 @@ using System.Data.OleDb;
 
 namespace CapaDatos
 {
-    class DatosConexion
+    public class DatosConexion
     {
         protected OleDbConnection conexion;
         protected string CadenaConexion = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\juli_\source\repos\proyecto\DB_producto.accdb";
