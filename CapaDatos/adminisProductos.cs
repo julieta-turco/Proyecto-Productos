@@ -65,7 +65,7 @@ namespace CapaDatos
             }
             catch (Exception e)
             {
-                throw new Exception("Error al listar profesionales", e);
+                throw new Exception("Error al listar productos", e);
             }
             finally
             {

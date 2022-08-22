@@ -1,4 +1,6 @@
 ﻿
+using System;
+
 namespace WindowsFormsProductos
 {
     partial class Formproductos
@@ -35,21 +37,21 @@ namespace WindowsFormsProductos
             this.dgv_productos = new System.Windows.Forms.DataGridView();
             this.tab_productos = new System.Windows.Forms.TabControl();
             this.tabCargar = new System.Windows.Forms.TabPage();
-            this.tabMov = new System.Windows.Forms.TabPage();
-            this.radioButtoning = new System.Windows.Forms.RadioButton();
-            this.radioButtonegr = new System.Windows.Forms.RadioButton();
-            this.btn_aceptar = new System.Windows.Forms.Button();
             this.textBoxDesc = new System.Windows.Forms.TextBox();
             this.textBoxCod = new System.Windows.Forms.TextBox();
             this.textBoxStock = new System.Windows.Forms.TextBox();
             this.labelStock = new System.Windows.Forms.Label();
             this.labelDescripcion = new System.Windows.Forms.Label();
             this.labelCodigo = new System.Windows.Forms.Label();
-            this.lblCodMov = new System.Windows.Forms.Label();
-            this.lblDescMov = new System.Windows.Forms.Label();
-            this.textBoxcant = new System.Windows.Forms.TextBox();
-            this.labelcant = new System.Windows.Forms.Label();
+            this.tabMov = new System.Windows.Forms.TabPage();
             this.lblStockMov = new System.Windows.Forms.Label();
+            this.labelcant = new System.Windows.Forms.Label();
+            this.lblCodMov = new System.Windows.Forms.Label();
+            this.btn_aceptar = new System.Windows.Forms.Button();
+            this.lblDescMov = new System.Windows.Forms.Label();
+            this.radioButtonegr = new System.Windows.Forms.RadioButton();
+            this.textBoxcant = new System.Windows.Forms.TextBox();
+            this.radioButtoning = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_productos)).BeginInit();
             this.tab_productos.SuspendLayout();
             this.tabCargar.SuspendLayout();
@@ -86,12 +88,13 @@ namespace WindowsFormsProductos
             // dgv_productos
             // 
             this.dgv_productos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_productos.Location = new System.Drawing.Point(355, 125);
+            this.dgv_productos.Location = new System.Drawing.Point(355, 41);
             this.dgv_productos.Name = "dgv_productos";
             this.dgv_productos.RowHeadersWidth = 62;
             this.dgv_productos.RowTemplate.Height = 28;
             this.dgv_productos.Size = new System.Drawing.Size(403, 278);
             this.dgv_productos.TabIndex = 7;
+            this.dgv_productos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_productos_CellContentClick);
             // 
             // tab_productos
             // 
@@ -122,55 +125,6 @@ namespace WindowsFormsProductos
             this.tabCargar.TabIndex = 0;
             this.tabCargar.Text = "carga productos";
             this.tabCargar.UseVisualStyleBackColor = true;
-            // 
-            // tabMov
-            // 
-            this.tabMov.Controls.Add(this.lblStockMov);
-            this.tabMov.Controls.Add(this.labelcant);
-            this.tabMov.Controls.Add(this.lblCodMov);
-            this.tabMov.Controls.Add(this.btn_aceptar);
-            this.tabMov.Controls.Add(this.lblDescMov);
-            this.tabMov.Controls.Add(this.radioButtonegr);
-            this.tabMov.Controls.Add(this.textBoxcant);
-            this.tabMov.Controls.Add(this.radioButtoning);
-            this.tabMov.Location = new System.Drawing.Point(4, 29);
-            this.tabMov.Name = "tabMov";
-            this.tabMov.Padding = new System.Windows.Forms.Padding(3);
-            this.tabMov.Size = new System.Drawing.Size(329, 358);
-            this.tabMov.TabIndex = 1;
-            this.tabMov.Text = "movimiento productos";
-            this.tabMov.UseVisualStyleBackColor = true;
-            // 
-            // radioButtoning
-            // 
-            this.radioButtoning.AutoSize = true;
-            this.radioButtoning.Location = new System.Drawing.Point(67, 221);
-            this.radioButtoning.Name = "radioButtoning";
-            this.radioButtoning.Size = new System.Drawing.Size(86, 24);
-            this.radioButtoning.TabIndex = 4;
-            this.radioButtoning.TabStop = true;
-            this.radioButtoning.Text = "ingreso";
-            this.radioButtoning.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonegr
-            // 
-            this.radioButtonegr.AutoSize = true;
-            this.radioButtonegr.Location = new System.Drawing.Point(67, 252);
-            this.radioButtonegr.Name = "radioButtonegr";
-            this.radioButtonegr.Size = new System.Drawing.Size(83, 24);
-            this.radioButtonegr.TabIndex = 5;
-            this.radioButtonegr.TabStop = true;
-            this.radioButtonegr.Text = "egreso";
-            this.radioButtonegr.UseVisualStyleBackColor = true;
-            // 
-            // btn_aceptar
-            // 
-            this.btn_aceptar.Location = new System.Drawing.Point(226, 241);
-            this.btn_aceptar.Name = "btn_aceptar";
-            this.btn_aceptar.Size = new System.Drawing.Size(86, 35);
-            this.btn_aceptar.TabIndex = 6;
-            this.btn_aceptar.Text = "aceptar";
-            this.btn_aceptar.UseVisualStyleBackColor = true;
             // 
             // textBoxDesc
             // 
@@ -220,30 +174,32 @@ namespace WindowsFormsProductos
             this.labelCodigo.TabIndex = 9;
             this.labelCodigo.Text = "codigo";
             // 
-            // lblCodMov
+            // tabMov
             // 
-            this.lblCodMov.AutoSize = true;
-            this.lblCodMov.Location = new System.Drawing.Point(30, 50);
-            this.lblCodMov.Name = "lblCodMov";
-            this.lblCodMov.Size = new System.Drawing.Size(51, 20);
-            this.lblCodMov.TabIndex = 15;
-            this.lblCodMov.Text = "label1";
+            this.tabMov.Controls.Add(this.lblStockMov);
+            this.tabMov.Controls.Add(this.labelcant);
+            this.tabMov.Controls.Add(this.lblCodMov);
+            this.tabMov.Controls.Add(this.btn_aceptar);
+            this.tabMov.Controls.Add(this.lblDescMov);
+            this.tabMov.Controls.Add(this.radioButtonegr);
+            this.tabMov.Controls.Add(this.textBoxcant);
+            this.tabMov.Controls.Add(this.radioButtoning);
+            this.tabMov.Location = new System.Drawing.Point(4, 29);
+            this.tabMov.Name = "tabMov";
+            this.tabMov.Padding = new System.Windows.Forms.Padding(3);
+            this.tabMov.Size = new System.Drawing.Size(329, 358);
+            this.tabMov.TabIndex = 1;
+            this.tabMov.Text = "movimiento productos";
+            this.tabMov.UseVisualStyleBackColor = true;
             // 
-            // lblDescMov
+            // lblStockMov
             // 
-            this.lblDescMov.AutoSize = true;
-            this.lblDescMov.Location = new System.Drawing.Point(30, 106);
-            this.lblDescMov.Name = "lblDescMov";
-            this.lblDescMov.Size = new System.Drawing.Size(51, 20);
-            this.lblDescMov.TabIndex = 16;
-            this.lblDescMov.Text = "label2";
-            // 
-            // textBoxcant
-            // 
-            this.textBoxcant.Location = new System.Drawing.Point(139, 170);
-            this.textBoxcant.Name = "textBoxcant";
-            this.textBoxcant.Size = new System.Drawing.Size(100, 26);
-            this.textBoxcant.TabIndex = 18;
+            this.lblStockMov.AutoSize = true;
+            this.lblStockMov.Location = new System.Drawing.Point(30, 146);
+            this.lblStockMov.Name = "lblStockMov";
+            this.lblStockMov.Size = new System.Drawing.Size(51, 20);
+            this.lblStockMov.TabIndex = 20;
+            this.lblStockMov.Text = "label1";
             // 
             // labelcant
             // 
@@ -254,14 +210,62 @@ namespace WindowsFormsProductos
             this.labelcant.TabIndex = 19;
             this.labelcant.Text = "cantidad";
             // 
-            // lblStockMov
+            // lblCodMov
             // 
-            this.lblStockMov.AutoSize = true;
-            this.lblStockMov.Location = new System.Drawing.Point(30, 146);
-            this.lblStockMov.Name = "lblStockMov";
-            this.lblStockMov.Size = new System.Drawing.Size(51, 20);
-            this.lblStockMov.TabIndex = 20;
-            this.lblStockMov.Text = "label1";
+            this.lblCodMov.AutoSize = true;
+            this.lblCodMov.Location = new System.Drawing.Point(30, 50);
+            this.lblCodMov.Name = "lblCodMov";
+            this.lblCodMov.Size = new System.Drawing.Size(51, 20);
+            this.lblCodMov.TabIndex = 15;
+            this.lblCodMov.Text = "label1";
+            // 
+            // btn_aceptar
+            // 
+            this.btn_aceptar.Location = new System.Drawing.Point(226, 241);
+            this.btn_aceptar.Name = "btn_aceptar";
+            this.btn_aceptar.Size = new System.Drawing.Size(86, 35);
+            this.btn_aceptar.TabIndex = 6;
+            this.btn_aceptar.Text = "aceptar";
+            this.btn_aceptar.UseVisualStyleBackColor = true;
+            this.btn_aceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
+            // 
+            // lblDescMov
+            // 
+            this.lblDescMov.AutoSize = true;
+            this.lblDescMov.Location = new System.Drawing.Point(30, 106);
+            this.lblDescMov.Name = "lblDescMov";
+            this.lblDescMov.Size = new System.Drawing.Size(51, 20);
+            this.lblDescMov.TabIndex = 16;
+            this.lblDescMov.Text = "label2";
+            // 
+            // radioButtonegr
+            // 
+            this.radioButtonegr.AutoSize = true;
+            this.radioButtonegr.Location = new System.Drawing.Point(67, 252);
+            this.radioButtonegr.Name = "radioButtonegr";
+            this.radioButtonegr.Size = new System.Drawing.Size(83, 24);
+            this.radioButtonegr.TabIndex = 5;
+            this.radioButtonegr.TabStop = true;
+            this.radioButtonegr.Text = "egreso";
+            this.radioButtonegr.UseVisualStyleBackColor = true;
+            // 
+            // textBoxcant
+            // 
+            this.textBoxcant.Location = new System.Drawing.Point(139, 170);
+            this.textBoxcant.Name = "textBoxcant";
+            this.textBoxcant.Size = new System.Drawing.Size(100, 26);
+            this.textBoxcant.TabIndex = 18;
+            // 
+            // radioButtoning
+            // 
+            this.radioButtoning.AutoSize = true;
+            this.radioButtoning.Location = new System.Drawing.Point(67, 221);
+            this.radioButtoning.Name = "radioButtoning";
+            this.radioButtoning.Size = new System.Drawing.Size(86, 24);
+            this.radioButtoning.TabIndex = 4;
+            this.radioButtoning.TabStop = true;
+            this.radioButtoning.Text = "ingreso";
+            this.radioButtoning.UseVisualStyleBackColor = true;
             // 
             // Formproductos
             // 
@@ -281,6 +285,11 @@ namespace WindowsFormsProductos
             this.tabMov.PerformLayout();
             this.ResumeLayout(false);
 
+        }
+
+        private void Formproductos_Load(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion

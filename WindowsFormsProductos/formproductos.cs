@@ -86,13 +86,32 @@ namespace WindowsFormsProductos
             dgv_productos[1, lugar].Value = prod.P_Descripcion;
             dgv_productos[2, lugar].Value = prod.P_Stock.ToString();
         }
-        private void btn_aceptar (object sender, EventArgs e)
+        private void Ds_a_Controles (DataSet ds)
         {
-            if (radioButtoning.Checked== true)
+            lblCodMov.Text = ds.Tables[0].Rows[0]["codigo"].ToString();
+            lblDescMov.Text = ds.Tables[0].Rows[0]["descripcion"].ToString();
+            lblStockMov.Text ="hay" + ds.Tables[0].Rows[0]["stock"].ToString() + "unidades";
+        }
+        private void dgv_productos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            ProdExistente = new producto(Convert.ToInt32(dgv_productos.CurrentRow.Cells[0]), dgv_productos.CurrentRow.Cells[1].ToString(),
+               Convert.ToInt32(dgv_productos.CurrentRow.Cells[2]));
+            DataSet ds = new DataSet();
+
+            ds = objNegProducto.listadoproductos(ProdExistente.P_Codigo.ToString());
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                Ds_a_Controles(ds);
+            }
+
+        }
+        private void btn_aceptar_Click(object sender, EventArgs e)
+        {
+            if (radioButtoning.Checked == true)
             {
                 ProdExistente.Ingreso(int.Parse(textBoxcant.Text));
             }
-            if (radioButtonegr.Checked==true)
+            if (radioButtonegr.Checked == true)
             {
                 ProdExistente.Salida(int.Parse(textBoxcant.Text));
             }
@@ -100,28 +119,10 @@ namespace WindowsFormsProductos
             nresultado = objNegProducto.abmProductos("Modificar", ProdExistente);
             if (nresultado != -1)
             {
-                LlenarDgv;
+                LlenarDgv();
             }
             else
                 MessageBox.Show("Error", "Se produjo un error al intentar modificar el producto");
-        }
-        private void dgv_productos (object sender, DataGridViewCellEventArgs e)
-        {
-            ProdExistente = new producto(Convert.ToInt32(dgv_productos.CurrentRow.Cells[0].value), dgv_productos.CurrentRow.Cells[1].value.ToString(),
-                Convert.ToInt32(dgv_productos.CurrentRow.Cells[2].value));
-            DataSet ds = new DataSet();
-
-            ds = objNegProducto.listadoproductos(ProdExistente.P_Codigo.ToString());
-            if (ds.Tables[0].Rows.Count>0)
-            {
-                Ds_a_Controles(ds);
-            }
-        }
-        private void Ds_a_Controles (DataSet ds)
-        {
-            lblCodMov.Text = ds.Tables[0].Rows[0]["codigo"].ToString();
-            lblDescMov.Text = ds.Tables[0].Rows[0]["descripcion"].ToString();
-            lblStockMov.Text ="hay" + ds.Tables[0].Rows[0]["stock"].ToString() + "unidades";
         }
     }
 }
