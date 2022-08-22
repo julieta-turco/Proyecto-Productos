@@ -16,14 +16,14 @@ namespace CapaDatos
             int resultado = -1;
             string orden = string.Empty;
            
-            if (accion == "Agregar")
+            if (accion == "Alta")
                 orden = "insert into productos values (" + objProductos.P_Codigo +
                 ",'" + objProductos.P_Descripcion+ "', "+objProductos.P_Stock + ");";
             if (accion == "Modificar")
                 orden = "update productos set descripcion='" + objProductos.P_Descripcion +
                     "', stock=" + objProductos.P_Stock + "where codigo = "+ objProductos.P_Codigo + "; ";
-            if (accion== "Borrar")
-                orden= "delete productos get codigo'" + objProductos.P_Codigo + ",'" +
+            if (accion == "Borrar")
+                orden = "delete productos get codigo'" + objProductos.P_Codigo + ",'" +
                     objProductos.P_Descripcion + ",'" + objProductos.P_Stock + ");";
 
         

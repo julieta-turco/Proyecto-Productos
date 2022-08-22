@@ -1,9 +1,7 @@
 ﻿
-using System;
-
 namespace WindowsFormsProductos
 {
-    partial class formproductos
+    partial class Formproductos
     {
         /// <summary>
         /// Required designer variable.
@@ -31,279 +29,281 @@ namespace WindowsFormsProductos
         /// </summary>
         private void InitializeComponent()
         {
-            this.codigo = new System.Windows.Forms.Label();
-            this.descripcion = new System.Windows.Forms.Label();
-            this.stock = new System.Windows.Forms.Label();
-            this.textBoxCod = new System.Windows.Forms.TextBox();
+            this.labelMessage = new System.Windows.Forms.Label();
+            this.btn_cargar = new System.Windows.Forms.Button();
+            this.btn_modificar = new System.Windows.Forms.Button();
+            this.dgv_productos = new System.Windows.Forms.DataGridView();
+            this.tab_productos = new System.Windows.Forms.TabControl();
+            this.tabCargar = new System.Windows.Forms.TabPage();
+            this.tabMov = new System.Windows.Forms.TabPage();
+            this.radioButtoning = new System.Windows.Forms.RadioButton();
+            this.radioButtonegr = new System.Windows.Forms.RadioButton();
+            this.btn_aceptar = new System.Windows.Forms.Button();
             this.textBoxDesc = new System.Windows.Forms.TextBox();
+            this.textBoxCod = new System.Windows.Forms.TextBox();
             this.textBoxStock = new System.Windows.Forms.TextBox();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPageCarga = new System.Windows.Forms.TabPage();
-            this.cargar = new System.Windows.Forms.Button();
-            this.tabPageMov = new System.Windows.Forms.TabPage();
-            this.rdbt_egr = new System.Windows.Forms.RadioButton();
-            this.rdbt_ing = new System.Windows.Forms.RadioButton();
-            this.lbl_stock = new System.Windows.Forms.Label();
-            this.lbl_codigodesc = new System.Windows.Forms.Label();
-            this.lbl_codigomov = new System.Windows.Forms.Label();
-            this.aceptar = new System.Windows.Forms.Button();
-            this.textBoxCantidad = new System.Windows.Forms.TextBox();
-            this.lbl_cantidad = new System.Windows.Forms.Label();
-            this.Dgv_productos = new System.Windows.Forms.DataGridView();
-            this.tabControl1.SuspendLayout();
-            this.tabPageCarga.SuspendLayout();
-            this.tabPageMov.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Dgv_productos)).BeginInit();
+            this.labelStock = new System.Windows.Forms.Label();
+            this.labelDescripcion = new System.Windows.Forms.Label();
+            this.labelCodigo = new System.Windows.Forms.Label();
+            this.lblCodMov = new System.Windows.Forms.Label();
+            this.lblDescMov = new System.Windows.Forms.Label();
+            this.textBoxcant = new System.Windows.Forms.TextBox();
+            this.labelcant = new System.Windows.Forms.Label();
+            this.lblStockMov = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_productos)).BeginInit();
+            this.tab_productos.SuspendLayout();
+            this.tabCargar.SuspendLayout();
+            this.tabMov.SuspendLayout();
             this.SuspendLayout();
             // 
-            // codigo
+            // labelMessage
             // 
-            this.codigo.AutoSize = true;
-            this.codigo.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.codigo.Location = new System.Drawing.Point(78, 33);
-            this.codigo.Name = "codigo";
-            this.codigo.Size = new System.Drawing.Size(43, 16);
-            this.codigo.TabIndex = 0;
-            this.codigo.Text = "codigo";
-            this.codigo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.labelMessage.AutoSize = true;
+            this.labelMessage.Location = new System.Drawing.Point(55, 301);
+            this.labelMessage.Name = "labelMessage";
+            this.labelMessage.Size = new System.Drawing.Size(51, 20);
+            this.labelMessage.TabIndex = 2;
+            this.labelMessage.Text = "label3";
             // 
-            // descripcion
+            // btn_cargar
             // 
-            this.descripcion.AutoSize = true;
-            this.descripcion.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.descripcion.Location = new System.Drawing.Point(78, 57);
-            this.descripcion.Name = "descripcion";
-            this.descripcion.Size = new System.Drawing.Size(64, 16);
-            this.descripcion.TabIndex = 1;
-            this.descripcion.Text = "descripcion";
+            this.btn_cargar.Location = new System.Drawing.Point(42, 243);
+            this.btn_cargar.Name = "btn_cargar";
+            this.btn_cargar.Size = new System.Drawing.Size(85, 33);
+            this.btn_cargar.TabIndex = 5;
+            this.btn_cargar.Text = "cargar";
+            this.btn_cargar.UseVisualStyleBackColor = true;
             // 
-            // stock
+            // btn_modificar
             // 
-            this.stock.AutoSize = true;
-            this.stock.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.stock.Location = new System.Drawing.Point(78, 84);
-            this.stock.Name = "stock";
-            this.stock.Size = new System.Drawing.Size(34, 16);
-            this.stock.TabIndex = 2;
-            this.stock.Text = "stock";
+            this.btn_modificar.Location = new System.Drawing.Point(162, 243);
+            this.btn_modificar.Name = "btn_modificar";
+            this.btn_modificar.Size = new System.Drawing.Size(86, 33);
+            this.btn_modificar.TabIndex = 6;
+            this.btn_modificar.Text = "Modificar";
+            this.btn_modificar.UseVisualStyleBackColor = true;
             // 
-            // textBoxCod
+            // dgv_productos
             // 
-            this.textBoxCod.Location = new System.Drawing.Point(160, 33);
-            this.textBoxCod.Name = "textBoxCod";
-            this.textBoxCod.Size = new System.Drawing.Size(201, 22);
-            this.textBoxCod.TabIndex = 4;
+            this.dgv_productos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_productos.Location = new System.Drawing.Point(355, 125);
+            this.dgv_productos.Name = "dgv_productos";
+            this.dgv_productos.RowHeadersWidth = 62;
+            this.dgv_productos.RowTemplate.Height = 28;
+            this.dgv_productos.Size = new System.Drawing.Size(403, 278);
+            this.dgv_productos.TabIndex = 7;
+            // 
+            // tab_productos
+            // 
+            this.tab_productos.AccessibleName = "";
+            this.tab_productos.Controls.Add(this.tabCargar);
+            this.tab_productos.Controls.Add(this.tabMov);
+            this.tab_productos.Location = new System.Drawing.Point(12, 12);
+            this.tab_productos.Name = "tab_productos";
+            this.tab_productos.SelectedIndex = 0;
+            this.tab_productos.Size = new System.Drawing.Size(337, 391);
+            this.tab_productos.TabIndex = 8;
+            // 
+            // tabCargar
+            // 
+            this.tabCargar.Controls.Add(this.textBoxDesc);
+            this.tabCargar.Controls.Add(this.labelMessage);
+            this.tabCargar.Controls.Add(this.textBoxCod);
+            this.tabCargar.Controls.Add(this.btn_cargar);
+            this.tabCargar.Controls.Add(this.textBoxStock);
+            this.tabCargar.Controls.Add(this.btn_modificar);
+            this.tabCargar.Controls.Add(this.labelStock);
+            this.tabCargar.Controls.Add(this.labelDescripcion);
+            this.tabCargar.Controls.Add(this.labelCodigo);
+            this.tabCargar.Location = new System.Drawing.Point(4, 29);
+            this.tabCargar.Name = "tabCargar";
+            this.tabCargar.Padding = new System.Windows.Forms.Padding(3);
+            this.tabCargar.Size = new System.Drawing.Size(329, 358);
+            this.tabCargar.TabIndex = 0;
+            this.tabCargar.Text = "carga productos";
+            this.tabCargar.UseVisualStyleBackColor = true;
+            // 
+            // tabMov
+            // 
+            this.tabMov.Controls.Add(this.lblStockMov);
+            this.tabMov.Controls.Add(this.labelcant);
+            this.tabMov.Controls.Add(this.lblCodMov);
+            this.tabMov.Controls.Add(this.btn_aceptar);
+            this.tabMov.Controls.Add(this.lblDescMov);
+            this.tabMov.Controls.Add(this.radioButtonegr);
+            this.tabMov.Controls.Add(this.textBoxcant);
+            this.tabMov.Controls.Add(this.radioButtoning);
+            this.tabMov.Location = new System.Drawing.Point(4, 29);
+            this.tabMov.Name = "tabMov";
+            this.tabMov.Padding = new System.Windows.Forms.Padding(3);
+            this.tabMov.Size = new System.Drawing.Size(329, 358);
+            this.tabMov.TabIndex = 1;
+            this.tabMov.Text = "movimiento productos";
+            this.tabMov.UseVisualStyleBackColor = true;
+            // 
+            // radioButtoning
+            // 
+            this.radioButtoning.AutoSize = true;
+            this.radioButtoning.Location = new System.Drawing.Point(67, 221);
+            this.radioButtoning.Name = "radioButtoning";
+            this.radioButtoning.Size = new System.Drawing.Size(86, 24);
+            this.radioButtoning.TabIndex = 4;
+            this.radioButtoning.TabStop = true;
+            this.radioButtoning.Text = "ingreso";
+            this.radioButtoning.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonegr
+            // 
+            this.radioButtonegr.AutoSize = true;
+            this.radioButtonegr.Location = new System.Drawing.Point(67, 252);
+            this.radioButtonegr.Name = "radioButtonegr";
+            this.radioButtonegr.Size = new System.Drawing.Size(83, 24);
+            this.radioButtonegr.TabIndex = 5;
+            this.radioButtonegr.TabStop = true;
+            this.radioButtonegr.Text = "egreso";
+            this.radioButtonegr.UseVisualStyleBackColor = true;
+            // 
+            // btn_aceptar
+            // 
+            this.btn_aceptar.Location = new System.Drawing.Point(226, 241);
+            this.btn_aceptar.Name = "btn_aceptar";
+            this.btn_aceptar.Size = new System.Drawing.Size(86, 35);
+            this.btn_aceptar.TabIndex = 6;
+            this.btn_aceptar.Text = "aceptar";
+            this.btn_aceptar.UseVisualStyleBackColor = true;
             // 
             // textBoxDesc
             // 
-            this.textBoxDesc.Location = new System.Drawing.Point(160, 59);
+            this.textBoxDesc.Location = new System.Drawing.Point(148, 126);
             this.textBoxDesc.Name = "textBoxDesc";
-            this.textBoxDesc.Size = new System.Drawing.Size(201, 22);
-            this.textBoxDesc.TabIndex = 5;
+            this.textBoxDesc.Size = new System.Drawing.Size(100, 26);
+            this.textBoxDesc.TabIndex = 14;
+            // 
+            // textBoxCod
+            // 
+            this.textBoxCod.Location = new System.Drawing.Point(148, 63);
+            this.textBoxCod.Name = "textBoxCod";
+            this.textBoxCod.Size = new System.Drawing.Size(100, 26);
+            this.textBoxCod.TabIndex = 13;
             // 
             // textBoxStock
             // 
-            this.textBoxStock.Location = new System.Drawing.Point(160, 84);
+            this.textBoxStock.Location = new System.Drawing.Point(148, 190);
             this.textBoxStock.Name = "textBoxStock";
-            this.textBoxStock.Size = new System.Drawing.Size(201, 22);
-            this.textBoxStock.TabIndex = 6;
+            this.textBoxStock.Size = new System.Drawing.Size(100, 26);
+            this.textBoxStock.TabIndex = 12;
             // 
-            // tabControl1
+            // labelStock
             // 
-            this.tabControl1.Controls.Add(this.tabPageCarga);
-            this.tabControl1.Controls.Add(this.tabPageMov);
-            this.tabControl1.Font = new System.Drawing.Font("Microsoft YaHei Light", 8.25F);
-            this.tabControl1.Location = new System.Drawing.Point(31, -3);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(540, 164);
-            this.tabControl1.TabIndex = 7;
+            this.labelStock.AutoSize = true;
+            this.labelStock.Location = new System.Drawing.Point(80, 190);
+            this.labelStock.Name = "labelStock";
+            this.labelStock.Size = new System.Drawing.Size(47, 20);
+            this.labelStock.TabIndex = 11;
+            this.labelStock.Text = "stock";
             // 
-            // tabPageCarga
+            // labelDescripcion
             // 
-            this.tabPageCarga.BackColor = System.Drawing.Color.PeachPuff;
-            this.tabPageCarga.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tabPageCarga.Controls.Add(this.cargar);
-            this.tabPageCarga.Controls.Add(this.textBoxDesc);
-            this.tabPageCarga.Controls.Add(this.textBoxStock);
-            this.tabPageCarga.Controls.Add(this.codigo);
-            this.tabPageCarga.Controls.Add(this.descripcion);
-            this.tabPageCarga.Controls.Add(this.textBoxCod);
-            this.tabPageCarga.Controls.Add(this.stock);
-            this.tabPageCarga.Location = new System.Drawing.Point(4, 25);
-            this.tabPageCarga.Name = "tabPageCarga";
-            this.tabPageCarga.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabPageCarga.Size = new System.Drawing.Size(532, 135);
-            this.tabPageCarga.TabIndex = 0;
-            this.tabPageCarga.Text = "carga de productos";
+            this.labelDescripcion.AutoSize = true;
+            this.labelDescripcion.Location = new System.Drawing.Point(38, 132);
+            this.labelDescripcion.Name = "labelDescripcion";
+            this.labelDescripcion.Size = new System.Drawing.Size(89, 20);
+            this.labelDescripcion.TabIndex = 10;
+            this.labelDescripcion.Text = "descripcion";
             // 
-            // cargar
+            // labelCodigo
             // 
-            this.cargar.Location = new System.Drawing.Point(450, 82);
-            this.cargar.Name = "cargar";
-            this.cargar.Size = new System.Drawing.Size(75, 23);
-            this.cargar.TabIndex = 7;
-            this.cargar.Text = "cargar";
-            this.cargar.UseVisualStyleBackColor = true;
-            this.cargar.Click += new System.EventHandler(this.cargar_Click);
+            this.labelCodigo.AutoSize = true;
+            this.labelCodigo.Location = new System.Drawing.Point(71, 69);
+            this.labelCodigo.Name = "labelCodigo";
+            this.labelCodigo.Size = new System.Drawing.Size(56, 20);
+            this.labelCodigo.TabIndex = 9;
+            this.labelCodigo.Text = "codigo";
             // 
-            // tabPageMov
+            // lblCodMov
             // 
-            this.tabPageMov.BackColor = System.Drawing.Color.MistyRose;
-            this.tabPageMov.Controls.Add(this.rdbt_egr);
-            this.tabPageMov.Controls.Add(this.rdbt_ing);
-            this.tabPageMov.Controls.Add(this.lbl_stock);
-            this.tabPageMov.Controls.Add(this.lbl_codigodesc);
-            this.tabPageMov.Controls.Add(this.lbl_codigomov);
-            this.tabPageMov.Controls.Add(this.aceptar);
-            this.tabPageMov.Controls.Add(this.textBoxCantidad);
-            this.tabPageMov.Controls.Add(this.lbl_cantidad);
-            this.tabPageMov.Location = new System.Drawing.Point(4, 25);
-            this.tabPageMov.Name = "tabPageMov";
-            this.tabPageMov.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.tabPageMov.Size = new System.Drawing.Size(532, 135);
-            this.tabPageMov.TabIndex = 1;
-            this.tabPageMov.Text = "Movimiento de productos";
+            this.lblCodMov.AutoSize = true;
+            this.lblCodMov.Location = new System.Drawing.Point(30, 50);
+            this.lblCodMov.Name = "lblCodMov";
+            this.lblCodMov.Size = new System.Drawing.Size(51, 20);
+            this.lblCodMov.TabIndex = 15;
+            this.lblCodMov.Text = "label1";
             // 
-            // rdbt_egr
+            // lblDescMov
             // 
-            this.rdbt_egr.AutoSize = true;
-            this.rdbt_egr.Location = new System.Drawing.Point(255, 107);
-            this.rdbt_egr.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.rdbt_egr.Name = "rdbt_egr";
-            this.rdbt_egr.Size = new System.Drawing.Size(61, 20);
-            this.rdbt_egr.TabIndex = 9;
-            this.rdbt_egr.TabStop = true;
-            this.rdbt_egr.Text = "egreso";
-            this.rdbt_egr.UseVisualStyleBackColor = true;
+            this.lblDescMov.AutoSize = true;
+            this.lblDescMov.Location = new System.Drawing.Point(30, 106);
+            this.lblDescMov.Name = "lblDescMov";
+            this.lblDescMov.Size = new System.Drawing.Size(51, 20);
+            this.lblDescMov.TabIndex = 16;
+            this.lblDescMov.Text = "label2";
             // 
-            // rdbt_ing
+            // textBoxcant
             // 
-            this.rdbt_ing.AutoSize = true;
-            this.rdbt_ing.Location = new System.Drawing.Point(255, 85);
-            this.rdbt_ing.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.rdbt_ing.Name = "rdbt_ing";
-            this.rdbt_ing.Size = new System.Drawing.Size(63, 20);
-            this.rdbt_ing.TabIndex = 8;
-            this.rdbt_ing.TabStop = true;
-            this.rdbt_ing.Text = "ingreso";
-            this.rdbt_ing.UseVisualStyleBackColor = true;
+            this.textBoxcant.Location = new System.Drawing.Point(139, 170);
+            this.textBoxcant.Name = "textBoxcant";
+            this.textBoxcant.Size = new System.Drawing.Size(100, 26);
+            this.textBoxcant.TabIndex = 18;
             // 
-            // lbl_stock
+            // labelcant
             // 
-            this.lbl_stock.AutoSize = true;
-            this.lbl_stock.Location = new System.Drawing.Point(29, 73);
-            this.lbl_stock.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_stock.Name = "lbl_stock";
-            this.lbl_stock.Size = new System.Drawing.Size(35, 16);
-            this.lbl_stock.TabIndex = 7;
-            this.lbl_stock.Text = "label1";
+            this.labelcant.AutoSize = true;
+            this.labelcant.Location = new System.Drawing.Point(30, 176);
+            this.labelcant.Name = "labelcant";
+            this.labelcant.Size = new System.Drawing.Size(70, 20);
+            this.labelcant.TabIndex = 19;
+            this.labelcant.Text = "cantidad";
             // 
-            // lbl_codigodesc
+            // lblStockMov
             // 
-            this.lbl_codigodesc.AutoSize = true;
-            this.lbl_codigodesc.Location = new System.Drawing.Point(29, 49);
-            this.lbl_codigodesc.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_codigodesc.Name = "lbl_codigodesc";
-            this.lbl_codigodesc.Size = new System.Drawing.Size(37, 16);
-            this.lbl_codigodesc.TabIndex = 6;
-            this.lbl_codigodesc.Text = "label2";
+            this.lblStockMov.AutoSize = true;
+            this.lblStockMov.Location = new System.Drawing.Point(30, 146);
+            this.lblStockMov.Name = "lblStockMov";
+            this.lblStockMov.Size = new System.Drawing.Size(51, 20);
+            this.lblStockMov.TabIndex = 20;
+            this.lblStockMov.Text = "label1";
             // 
-            // lbl_codigomov
+            // Formproductos
             // 
-            this.lbl_codigomov.AutoSize = true;
-            this.lbl_codigomov.Location = new System.Drawing.Point(29, 22);
-            this.lbl_codigomov.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbl_codigomov.Name = "lbl_codigomov";
-            this.lbl_codigomov.Size = new System.Drawing.Size(35, 16);
-            this.lbl_codigomov.TabIndex = 5;
-            this.lbl_codigomov.Text = "label1";
-            // 
-            // aceptar
-            // 
-            this.aceptar.Font = new System.Drawing.Font("Arial Black", 8.25F);
-            this.aceptar.Location = new System.Drawing.Point(396, 94);
-            this.aceptar.Name = "aceptar";
-            this.aceptar.Size = new System.Drawing.Size(89, 23);
-            this.aceptar.TabIndex = 2;
-            this.aceptar.Text = "ACEPTAR";
-            this.aceptar.UseVisualStyleBackColor = true;
-            this.aceptar.Click += new System.EventHandler(this.aceptar_Click);
-            // 
-            // textBoxCantidad
-            // 
-            this.textBoxCantidad.Location = new System.Drawing.Point(97, 98);
-            this.textBoxCantidad.Name = "textBoxCantidad";
-            this.textBoxCantidad.Size = new System.Drawing.Size(100, 22);
-            this.textBoxCantidad.TabIndex = 1;
-            // 
-            // lbl_cantidad
-            // 
-            this.lbl_cantidad.AutoSize = true;
-            this.lbl_cantidad.Location = new System.Drawing.Point(29, 98);
-            this.lbl_cantidad.Name = "lbl_cantidad";
-            this.lbl_cantidad.Size = new System.Drawing.Size(51, 16);
-            this.lbl_cantidad.TabIndex = 0;
-            this.lbl_cantidad.Text = "cantidad";
-            // 
-            // Dgv_productos
-            // 
-            this.Dgv_productos.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.Dgv_productos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Dgv_productos.Location = new System.Drawing.Point(13, 166);
-            this.Dgv_productos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Dgv_productos.Name = "Dgv_productos";
-            this.Dgv_productos.RowHeadersWidth = 62;
-            this.Dgv_productos.RowTemplate.Height = 28;
-            this.Dgv_productos.Size = new System.Drawing.Size(574, 146);
-            this.Dgv_productos.TabIndex = 8;
-            // 
-            // formproductos
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(602, 323);
-            this.Controls.Add(this.Dgv_productos);
-            this.Controls.Add(this.tabControl1);
-            this.Name = "formproductos";
-            this.Text = "formproductos";
-            this.Load += new System.EventHandler(this.formproductos_Load);
-            this.tabControl1.ResumeLayout(false);
-            this.tabPageCarga.ResumeLayout(false);
-            this.tabPageCarga.PerformLayout();
-            this.tabPageMov.ResumeLayout(false);
-            this.tabPageMov.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Dgv_productos)).EndInit();
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.tab_productos);
+            this.Controls.Add(this.dgv_productos);
+            this.Name = "Formproductos";
+            this.Text = "Formproductos";
+            this.Load += new System.EventHandler(this.Formproductos_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_productos)).EndInit();
+            this.tab_productos.ResumeLayout(false);
+            this.tabCargar.ResumeLayout(false);
+            this.tabCargar.PerformLayout();
+            this.tabMov.ResumeLayout(false);
+            this.tabMov.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
-
         #endregion
-
-        private System.Windows.Forms.Label codigo;
-        private System.Windows.Forms.Label descripcion;
-        private System.Windows.Forms.Label stock;
-        private System.Windows.Forms.TextBox textBoxCod;
+        private System.Windows.Forms.Label labelMessage;
+        private System.Windows.Forms.Button btn_cargar;
+        private System.Windows.Forms.Button btn_modificar;
+        private System.Windows.Forms.DataGridView dgv_productos;
+        private System.Windows.Forms.TabControl tab_productos;
+        private System.Windows.Forms.TabPage tabCargar;
+        private System.Windows.Forms.TabPage tabMov;
+        private System.Windows.Forms.Button btn_aceptar;
+        private System.Windows.Forms.RadioButton radioButtonegr;
+        private System.Windows.Forms.RadioButton radioButtoning;
         private System.Windows.Forms.TextBox textBoxDesc;
+        private System.Windows.Forms.TextBox textBoxCod;
         private System.Windows.Forms.TextBox textBoxStock;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPageCarga;
-        private System.Windows.Forms.TabPage tabPageMov;
-        private System.Windows.Forms.TextBox textBoxCantidad;
-        private System.Windows.Forms.Label lbl_cantidad;
-        private System.Windows.Forms.Button aceptar;
-        private System.Windows.Forms.Button cargar;
-        private System.Windows.Forms.DataGridView Dgv_productos;
-        private System.Windows.Forms.Label lbl_codigodesc;
-        private System.Windows.Forms.Label lbl_codigomov;
-        private System.Windows.Forms.Label lbl_stock;
-        private System.Windows.Forms.RadioButton rdbt_egr;
-        private System.Windows.Forms.RadioButton rdbt_ing;
+        private System.Windows.Forms.Label labelStock;
+        private System.Windows.Forms.Label labelDescripcion;
+        private System.Windows.Forms.Label labelCodigo;
+        private System.Windows.Forms.Label lblCodMov;
+        private System.Windows.Forms.Label lblDescMov;
+        private System.Windows.Forms.TextBox textBoxcant;
+        private System.Windows.Forms.Label labelcant;
+        private System.Windows.Forms.Label lblStockMov;
     }
 }

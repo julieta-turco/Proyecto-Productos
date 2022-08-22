@@ -47,12 +47,12 @@ namespace entidades
             stock = 0; //empieza en cero para ingresar un producto nuevo.
         }
 
-        //public producto(int cod, string desc,int cant)
-        //{
-        //    codigo = cod;
-        //    descripcion = desc;
-        //    stock = cant;
-        //}
+        public producto(int cod, string desc, int cant)
+        {
+            codigo = cod;
+            descripcion = desc;
+            stock = cant;
+        }
         #endregion
 
         #region Metodos
